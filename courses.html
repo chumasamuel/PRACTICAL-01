@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Courses - Department of Computer Science</title>
+
+    <link rel="stylesheet" href="courses.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>University of Kerala</h1>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html" class="active">Courses</a>
+        <a href="faculty.html">Faculty</a>
+        <a href="research.html">Research</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- PAGE TITLE -->
+    <section class="course-title">
+        <h2>Our Courses</h2>
+        <p>
+            Explore the academic programmes offered by the
+            Department of Computer Science.
+        </p>
+    </section>
+
+    <!-- COURSES -->
+    <section class="courses">
+
+        <div class="course-card">
+            <h3>B.Sc. Computer Science</h3>
+            <p>
+                An undergraduate programme that introduces students
+                to programming, databases, computer networks and
+                software development.
+            </p>
+
+            <p><strong>Level:</strong> Undergraduate</p>
+
+            <button onclick="showCourse('B.Sc. Computer Science')">
+                View Details
+            </button>
+        </div>
+
+
+        <div class="course-card">
+            <h3>M.Sc. Computer Science</h3>
+            <p>
+                A postgraduate programme covering advanced areas of
+                computer science, programming, algorithms, databases
+                and software engineering.
+            </p>
+
+            <p><strong>Level:</strong> Postgraduate</p>
+
+            <button onclick="showCourse('M.Sc. Computer Science')">
+                View Details
+            </button>
+        </div>
+
+
+        <div class="course-card">
+            <h3>M.Sc. Computer Science - AI</h3>
+            <p>
+                A postgraduate programme focused on Artificial
+                Intelligence, machine learning and intelligent
+                computing technologies.
+            </p>
+
+            <p><strong>Level:</strong> Postgraduate</p>
+
+            <button onclick="showCourse('M.Sc. Computer Science - AI')">
+                View Details
+            </button>
+        </div>
+
+
+        <div class="course-card">
+            <h3>M.Sc. Computer Science - ML</h3>
+            <p>
+                This programme focuses on machine learning,
+                data analysis and modern computational techniques.
+            </p>
+
+            <p><strong>Level:</strong> Postgraduate</p>
+
+            <button onclick="showCourse('M.Sc. Computer Science - ML')">
+                View Details
+            </button>
+        </div>
+
+
+        <div class="course-card">
+            <h3>M.Tech. Computer Science</h3>
+            <p>
+                An advanced programme designed to develop technical
+                and research skills in computer science and technology.
+            </p>
+
+            <p><strong>Level:</strong> Postgraduate</p>
+
+            <button onclick="showCourse('M.Tech. Computer Science')">
+                View Details
+            </button>
+        </div>
+
+
+        <div class="course-card">
+            <h3>Ph.D. Computer Science</h3>
+            <p>
+                A research-oriented programme for students interested
+                in advanced research and innovation in computer science.
+            </p>
+
+            <p><strong>Level:</strong> Doctoral</p>
+
+            <button onclick="showCourse('Ph.D. Computer Science')">
+                View Details
+            </button>
+        </div>
+
+    </section>
+
+
+    <!-- MODAL -->
+    <div id="courseModal" class="modal">
+
+        <div class="modal-content">
+
+            <span onclick="closeCourse()" class="close">&times;</span>
+
+            <h2 id="courseName">Course</h2>
+
+            <p>
+                This programme provides students with knowledge and
+                practical skills in computer science and modern
+                information technologies.
+            </p>
+
+            <button onclick="closeCourse()">Close</button>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            &copy; 2026 Department of Computer Science,
+            University of Kerala
+        </p>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function showCourse(course) {
+
+            document.getElementById("courseName").innerHTML = course;
+
+            document.getElementById("courseModal").style.display = "flex";
+        }
+
+
+        function closeCourse() {
+
+            document.getElementById("courseModal").style.display = "none";
+        }
+
+    </script>
+
+</body>
+</html>
